@@ -10,14 +10,16 @@ public:
 
         for (int i = 0; i < len; i++) {
             char temp = s[i];
-            if (stack.empty())
+            if (map.count(temp))
                 stack.push(temp);
             else {
+                if (stack.empty())
+                    return false;
                 char toCheck = stack.top();
                 if (map[toCheck] == temp)
                     stack.pop();
                 else
-                    stack.push(temp);
+                    return false;
             }
         }
         return stack.empty();
