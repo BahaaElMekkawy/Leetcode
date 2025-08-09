@@ -1,2 +1,2 @@
 # Leetcode
-Soultion of Leetcode That i have Solved
+A collection of problems I solved on LeetCode, mainly in C++.
